@@ -29,7 +29,10 @@
         <input type="date" id="end_date" name="end_date" required>
         <br>
         <h3>Predicted Values:</h3>
-        <textarea id="prediction"   rows="8" cols="35" readonly>{{prediction}}</textarea>
+        <div id="predbox">
+            <textarea id="prediction"   rows="8" cols="35" readonly>{{prediction}}</textarea>
+            <img src="{{graph}}" />
+        </div>
         <br><br>
         <input class="submit" type="submit" value="PREDICT">
     </form>
