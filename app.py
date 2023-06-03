@@ -4,7 +4,6 @@ import numpy as np
 import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
-from statsmodels.tsa.arima.model import ARIMA
 from statsmodels.graphics.tsaplots import plot_acf, plot_pacf
 import pickle
 from datetime import datetime, timedelta
@@ -15,10 +14,6 @@ model=pickle.load(open('arima.pkl','rb'))
 
 exogg = pd.read_csv('ndata.csv', index_col='Date', parse_dates=True)
 
-def rectify(arr):
-    arr1=arr.split("   ")
-    print(arr1)
-    return arr
 
 @app.route('/')
 def main():
